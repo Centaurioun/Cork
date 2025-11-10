@@ -379,9 +379,9 @@ public struct BrewPackage: Identifiable, Equatable, Hashable, Codable, Sendable,
 }
 
 /// Convert between ``MinimalHomebrewPackage`` and ``BrewPackage``
-extension BrewPackage
+public extension BrewPackage
 {
-    init?(from minimalPackage: MinimalHomebrewPackage?)
+    init?(using minimalPackage: MinimalHomebrewPackage?)
     {
         guard let minimalPackage = minimalPackage else { return nil }
 
@@ -404,3 +404,4 @@ public extension FormatStyle where Self == Date.FormatStyle
         dateTime.day().month(.wide).year().weekday(.wide).hour().minute()
     }
 }
+
