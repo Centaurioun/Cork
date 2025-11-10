@@ -7,6 +7,7 @@
 
 import CorkShared
 import SwiftUI
+import CorkModels
 
 struct StartPage: View
 {
