@@ -91,12 +91,7 @@ struct CorkApp: App
                 .environment(updateProgressTracker)
                 .environment(outdatedPackagesTracker)
                 .environment(topPackagesTracker)
-                .modelContainer(for: [
-                    SavedTaggedPackage.self
-                ])
-                .modelContainer(for: [
-                    ExcludedAdoptableApp.self
-                ])
+                .modelContainer(for: [SavedTaggedPackage.self, ExcludedAdoptableApp.self])
                 .task
                 {
                     NSWindow.allowsAutomaticWindowTabbing = false
